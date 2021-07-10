@@ -1,5 +1,6 @@
 {
     "title" : "Test",
-    "name" : "John"
+    "name" : "John",
+    "lastname" : "Doe"
 
 }
