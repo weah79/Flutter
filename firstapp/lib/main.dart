@@ -27,10 +27,10 @@ class _HomeState extends State<Home> {
     return Scaffold(
       body: Center(
           child: Text(
-        "bye bye covid",
+        "สวัสดี flutter",
         style: TextStyle(
-            fontSize: 50,
-            color: Colors.orange[200],
+            fontSize: 80,
+            color: Colors.orange[700],
             fontFamily: "Passadoo",
             fontWeight: FontWeight.bold),
       )),
