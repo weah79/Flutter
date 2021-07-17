@@ -29,18 +29,12 @@ class _HomeState extends State<Home> {
           child: Text(
         "bye bye covid",
         style: TextStyle(
-            fontSize: 50, color: Colors.orange[200], fontFamily: "Passadoo"),
+            fontSize: 50,
+            color: Colors.orange[200],
+            fontFamily: "Passadoo",
+            fontWeight: FontWeight.bold),
       )),
     );
   }
 }
 
-// final ButtonStyle raiseButtonStyle = ElevatedButton.styleFrom(
-//   onPrimary: Colors.blue[400],
-//   primary: Colors.blue[900],
-//   minimumSize: Size(88, 50),
-//   padding: EdgeInsets.symmetric(horizontal: 16),
-//   shape: const RoundedRectangleBorder(
-//     borderRadius: BorderRadius.all(Radius.circular(5)),
-//   ),
-// );
