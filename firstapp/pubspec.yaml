@@ -65,6 +65,10 @@ flutter:
     - family: SdProtector
       fonts:
         - asset: fonts/sd protector V.2.ttf
+    - family: Passadoo
+      fonts:
+        - asset: fonts/Passadoo Demo.ttf
+
   #       - asset: fonts/Schyler-Italic.ttf
   #         style: italic
   #   - family: Trajan Pro
