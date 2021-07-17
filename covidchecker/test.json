@@ -1,1 +1,6 @@
-{"title" : "Test"}
+{
+    "title" : "Test",
+    "name" : "John",
+    "lastname" : "Doe"
+
+}
