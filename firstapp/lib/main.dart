@@ -3,20 +3,20 @@ import 'package:flutter/material.dart';
 main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
+  // const MyApp({ Key? key }) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
         home: Scaffold(
-            appBar: AppBar(
-              title: Text('First App by Old man'),
-              centerTitle: true,
-            ),
-            body: Home()));
+      appBar: AppBar(title: Text('เเอพคำนวณ')),
+      body: Home(),
+    ));
   }
 }
 
 class Home extends StatefulWidget {
-  const Home({Key? key}) : super(key: key);
+  //const Home({ Key? key }) : super(key: key);
   @override
   _HomeState createState() => _HomeState();
 }
@@ -24,17 +24,17 @@ class Home extends StatefulWidget {
 class _HomeState extends State<Home> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: Center(
-          child: Text(
-        "สวัสดี flutter",
-        style: TextStyle(
-            fontSize: 80,
-            color: Colors.orange[700],
-            fontFamily: "Passadoo",
-            fontWeight: FontWeight.bold),
-      )),
-    );
+    return Center(
+        child: Column(
+      children: [
+        Image.asset('assets/orange.png', scale: 0.5,),        
+        Text('โปรแกรมคำนวณส้ม', style: TextStyle(fontSize: 30),),
+        TextField(
+          decoration: InputDecoration(
+              labelText: 'จำนวนส้ม', 
+              border: OutlineInputBorder()),
+        )
+      ],
+    ));
   }
 }
-
