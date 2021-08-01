@@ -51,6 +51,7 @@ flutter:
     - assets/earth.png
     - assets/earth2.png
     - assets/orange.png
+    - assets/bmi.png
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see
