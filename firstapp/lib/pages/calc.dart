@@ -96,7 +96,7 @@ class _CalculatePageState extends State<CalculatePage> {
                 height: 20,
               ),
               Padding(
-                padding: const EdgeInsets.fromLTRB(50, 10, 0, 0),
+                padding: const EdgeInsets.fromLTRB(50, 0, 0, 0),
                 child: Row(
                   children: [
                     Text(evaluateText,

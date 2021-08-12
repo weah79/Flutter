@@ -33,9 +33,9 @@ class _MainPageState extends State<MainPage> {
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: _currentIndex,
         items: [
-          BottomNavigationBarItem(icon: Icon(Icons.home), label: "Home"),
-          BottomNavigationBarItem(icon: Icon(Icons.calculate), label: "Calculation"),
-          BottomNavigationBarItem(icon: Icon(Icons.contact_phone), label: "Contact"),
+          BottomNavigationBarItem(icon: Icon(Icons.home), label: "หน้าแรก"),
+          BottomNavigationBarItem(icon: Icon(Icons.calculate), label: "คำนวณ"),
+          BottomNavigationBarItem(icon: Icon(Icons.contact_phone), label: "ติดต่อเรา"),
         ],
 
         onTap: (index){
