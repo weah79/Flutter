@@ -1,3 +1,4 @@
+import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:layout/pages/detail.dart';
 
@@ -16,42 +17,35 @@ class _HomePageState extends State<HomePage> {
         title: Text("เครื่องมือและเวบไซค์สำหรับการพัฒนาซอฟต์แวร์"),
       ),
       body: Padding(
-        padding: const EdgeInsets.all(20),
-        child: ListView(
-          children: [
-            MyBox(
-                "VS Code",
-                "เครื่องมือสำหรับพัฒนาเเอพพลิเคชั่น รองรับหลายภาษา เช่น Flutter, Python",
-                "https://media.istockphoto.com/photos/blurry-blue-circuit-wallpaper-picture-id1053210080?s=612x612"),
-            SizedBox(
-              height: 10,
-            ),
-            MyBox("Git", "เครื่องมือสำหรับควบคุมเวอร์ชั่น",
-                "https://media.istockphoto.com/vectors/futuristic-blue-cloud-with-pixel-digital-transformation-abstract-new-vector-id1134020821?k=6&m=1134020821&s=612x612&w=0&h=GuFjR0K-CWqStJY3r1oF6tfZQ-Au6zwP4O3U6Xt0KXk="),
-            SizedBox(
-              height: 10,
-            ),
-            MyBox(
-                "Docker",
-                "แพลตฟอร์มซอฟต์แวร์ที่ช่วยให้คุณสร้าง และทดสอบ แอพพลิเคชันได้อย่างรวดเร็ว",
-                "https://media.istockphoto.com/vectors/laptop-with-code-on-screen-hanging-over-icons-programming-app-web-vector-id1205513619?k=6&m=1205513619&s=612x612&w=0&h=OsI2tNhNn8pXwlIBnzBPewJmZ_bRNt7lO5GTW4XQ368="),
-            SizedBox(
-              height: 10,
-            ),
-            MyBox(
-                "StackOverflow",
-                "เวบไซค์ช่วยในการค้นหาเมื่อพบปัญหาในการเขียนโปรแกรม",
-                "https://media.istockphoto.com/photos/survey-poll-or-questionnaire-for-user-experience-or-customer-and-picture-id1065782440?k=6&m=1065782440&s=612x612&w=0&h=tkq0_Yza7lkLTwmM-fviV1dEo0cBNNTJwTK0L111oi4="),
-          ],
-        ),
-      ),
+          padding: const EdgeInsets.all(20),
+          child: FutureBuilder(
+            builder: (context, snapshot) {
+              var data = json.decode(snapshot.data.toString()); // [{},{},{}]
+
+              return ListView.builder(
+                itemBuilder: (BuildContext context, int index) {
+                  return MyBox(data[index]['title'], data[index]['subtitle'],
+                      data[index]['image_url'], data[index]['detail']);
+                },
+                itemCount: data.length,
+              );
+            },
+            future:
+                DefaultAssetBundle.of(context).loadString('assets/data.json'),
+          )),
     );
   }
 
-  Widget MyBox(String title, String subtitle, String imageurl) {
+  Widget MyBox(String title, String subtitle, String imageurl, String detail) {
+    var v1, v2, v3, v4;
+    v1 = title;
+    v2 = subtitle;
+    v3 = imageurl;
+    v4 = detail;
     return Container(
+        margin: EdgeInsets.all(20),
         padding: EdgeInsets.all(20),
-        height: 150,
+        height: 200,
         decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(20),
             image: DecorationImage(
@@ -91,8 +85,11 @@ class _HomePageState extends State<HomePage> {
               TextButton(
                   onPressed: () {
                     print("Next Page >>>");
-                    Navigator.push(context,
-                        MaterialPageRoute(builder: (context) => DetailPage()));
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) =>
+                                DetailPage(v1, v2, v3, v4)));
                   },
                   child: Text("อ่านต่อ"))
             ]));
