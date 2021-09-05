@@ -6,12 +6,6 @@
         "detail": "เป็นโปรแกรมจากบริษัทไมโครซอฟต์ เป็นประเภท Editor ใช้ในการแก้ไขโค้ดที่มีขนาดเล็ก แต่มีประสิทธิภาพสูง เป็น OpenSource โปรแกรมจึงสามารถนำมาใช้งานได้โดยไม่มีค่าใช้จ่าย เหมาะสำหรับนักพัฒนาโปรแกรมที่ต้องการใช้งานหลายแพลตฟอร์ม รองรับการใช้งานทั้งบน  Windows ,  macOS และ  Linux  รองรับหลายภาษาทั้ง  JavaScript, TypeScript และ Node.js ในตัว และสามารถเชื่อมต่อกับ  Git ได้ง่าย สามารถนำมาใช้งานได้ง่ายไม่ซับซ้อน มีเครื่องมือและส่วนขยายต่าง ๆ ให้เลือกใช้มากมาย รองรับการเปิดใช้งานภาษาอื่น ๆ ทั้ง ภาษา  C++ ,  C# ,  Java ,  Python ,  PHP  หรือ  Go  สามารถปรับเปลี่ยน Themes  ได้  มีส่วน Debugger  และ Commands  เป็นต้น"
     },
     {
-        "title": "Git",
-        "subtitle": "เครื่องมือสำหรับควบคุมเวอร์ชั่น",
-        "image_url": "https://media.istockphoto.com/vectors/futuristic-blue-cloud-with-pixel-digital-transformation-abstract-new-vector-id1134020821?k=6&m=1134020821&s=612x612&w=0&h=GuFjR0K-CWqStJY3r1oF6tfZQ-Au6zwP4O3U6Xt0KXk=",
-        "detail": "เป็นซอฟต์แวร์ที่ใช้ในระบบควบคุมรุ่นของซอฟต์แวร์ (revision control) โดยเริ่มแรกถูกพัฒนามาใช้สำหรับลินุกซ์ โดยลินุส โตร์วัลดส์ ไดเรกทอรีของกิตทุกตัวจะมีการเก็บประวัติทั้งหมด ปัจจุบันกิตดูแลโดย ฮูนิโอ ฮามาโน กิตเป็นซอฟต์แวร์ฟรีและแจกจ่ายในลักษณะของ GPL"
-    },
-    {
         "title": "Docker",
         "subtitle": "แพลตฟอร์มซอฟต์แวร์ที่ช่วยให้คุณสร้าง และทดสอบ แอพพลิเคชันได้อย่างรวดเร็ว",
         "image_url": "https://media.istockphoto.com/vectors/laptop-with-code-on-screen-hanging-over-icons-programming-app-web-vector-id1205513619?k=6&m=1205513619&s=612x612&w=0&h=OsI2tNhNn8pXwlIBnzBPewJmZ_bRNt7lO5GTW4XQ368=",
@@ -19,6 +13,12 @@
     },
     {
         "title": "StackOverflow",
+        "subtitle": "เวบไซค์ช่วยในการค้นหาเมื่อพบปัญหาในการเขียนโปรแกรม",
+        "image_url": "https://media.istockphoto.com/photos/survey-poll-or-questionnaire-for-user-experience-or-customer-and-picture-id1065782440?k=6&m=1065782440&s=612x612&w=0&h=tkq0_Yza7lkLTwmM-fviV1dEo0cBNNTJwTK0L111oi4=",
+        "detail": "คือ เวบไซค์เพื่อถามและตอบปัญหาของโปรแกรมเมอร์ ถ้าตั้งคำถาม และ อธิบายปัญหาอย่างละเอียดชัดเจน ให้ข้อมูลครับถ้วน อาจจะได้คำตอบ และ วิธีการแก้ไขปัญหาภายในเวลาไม่ถึงชั่วโมง"
+    },
+    {
+        "title": "Azure",
         "subtitle": "เวบไซค์ช่วยในการค้นหาเมื่อพบปัญหาในการเขียนโปรแกรม",
         "image_url": "https://media.istockphoto.com/photos/survey-poll-or-questionnaire-for-user-experience-or-customer-and-picture-id1065782440?k=6&m=1065782440&s=612x612&w=0&h=tkq0_Yza7lkLTwmM-fviV1dEo0cBNNTJwTK0L111oi4=",
         "detail": "คือ เวบไซค์เพื่อถามและตอบปัญหาของโปรแกรมเมอร์ ถ้าตั้งคำถาม และ อธิบายปัญหาอย่างละเอียดชัดเจน ให้ข้อมูลครับถ้วน อาจจะได้คำตอบ และ วิธีการแก้ไขปัญหาภายในเวลาไม่ถึงชั่วโมง"
