@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:layout/pages/contact.dart';
 import 'package:layout/pages/home.dart';
 import 'package:layout/pages/search.dart';
+import 'package:layout/pages/add.dart';
 
 void main() {
   runApp(MyApp());
@@ -29,7 +30,7 @@ class MainPage extends StatefulWidget {
 
 class _MainPageState extends State<MainPage> {
   int _currentIndex = 0;
-  final tabs = [HomePage(), SearchPage(), ContactPage()];
+  final tabs = [AddPage(), SearchPage(), ContactPage()];
 
   @override
   Widget build(BuildContext context) {

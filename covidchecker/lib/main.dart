@@ -182,36 +182,77 @@ class _HomePageState extends State<HomePage> {
   }
 
   Future _GetCovidData() async {
-    var url =
-        Uri.http('covid19.th-stat.com', '/json/covid19v2/getTodayCases.json');
-    var response = await http.get(url);
+    // var url =
+    //     Uri.http('covid19.th-stat.com', '/json/covid19v2/getTodayCases.json');
+    // var response = await http.get(url);
+
+    // print('----DATA----');
+    // print(response.body);
+
+    // var result = json.decode(response.body);
+    // var v1 = result['Confirmed'];
+    // var v2 = result['Recovered'];
+    // var v3 = result['Hospitalized'];
+    // var v4 = result['Deaths'];
+    // var v5 = result['NewConfirmed'];
+    // var v6 = result['NewRecovered'];
+    // var v7 = result['NewHospitalized'];
+    // var v8 = result['NewDeaths'];
+    // var v9 = result['UpdateDate'];
+
+    // var formatter = NumberFormat('###,###,###');
+
+    // setState(() {
+    //   confirmed.text = formatter.format(v1);
+    //   recovered.text = formatter.format(v2);
+    //   hospitalized.text = formatter.format(v3);
+    //   deaths.text = formatter.format(v4);
+    //   newConfirmed.text = formatter.format(v5);
+    //   newRecovered.text = formatter.format(v6);
+    //   newHospitalized.text = formatter.format(v7);
+    //   newDeaths.text = formatter.format(v8);
+    //   updateDate.text = v9;
+    // });
 
     print('----DATA----');
-    print(response.body);
+    // var headers = {
+    //   'Accept-Language': 'en-GB,th-TH',
+    //   'Accept': 'application/json'
+    // };
+    // var request = http.Request(
+    //     'GET',
+    //     Uri.parse(
+    //         'https://th-sombatp-nb2.orion.internal/MainLocalComponents/api-cert/back-office/patient-finance/policy-authorizations/?patientReferralIdentifier=27116@urn:orion:pas:referral:patient-referral:referral-number'));
+    // request.body = '''''';
+    // request.headers.addAll(headers);
 
-    var result = json.decode(response.body);
-    var v1 = result['Confirmed'];
-    var v2 = result['Recovered'];
-    var v3 = result['Hospitalized'];
-    var v4 = result['Deaths'];
-    var v5 = result['NewConfirmed'];
-    var v6 = result['NewRecovered'];
-    var v7 = result['NewHospitalized'];
-    var v8 = result['NewDeaths'];
-    var v9 = result['UpdateDate'];
+    // http.StreamedResponse response = await request.send();
 
-    var formatter = NumberFormat('###,###,###');
-    
-    setState(() {
-      confirmed.text = formatter.format(v1);
-      recovered.text = formatter.format(v2);
-      hospitalized.text = formatter.format(v3);
-      deaths.text = formatter.format(v4);
-      newConfirmed.text = formatter.format(v5);
-      newRecovered.text = formatter.format(v6);
-      newHospitalized.text = formatter.format(v7);
-      newDeaths.text = formatter.format(v8);
-      updateDate.text = v9;
-    });
+    // if (response.statusCode == 200) {
+    //   print(await response.stream.bytesToString());
+    // } else {
+    //   print(response.reasonPhrase);
+    // }
+
+    var headers = {
+      'Accept-Language': 'en-GB,th-TH',
+      'Accept': 'application/json',
+      'Authorization':
+          'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsIng1dCI6InlWTWptUUhwRzJvYU8xeEFTZ0hIVklHUURkUSJ9.eyJhdXRobWV0aG9kIjoiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2F1dGhlbnRpY2F0aW9ubWV0aG9kL3Bhc3N3b3JkIiwiYXV0aF90aW1lIjoiMjAyMS0wOS0yMFQwOTo0NzozMi45ODc3MTYyWiIsImh0dHA6Ly9zY2hlbWFzLm9yaW9uaGVhbHRoLmNvbS93cy8yMDE0LzEwL2lkZW50aXR5L2NsYWltcy9lbXBsb3llZS1pZCI6IkFFNDU0RTM3LTdEODctMTFERC04MzJELTAwMTM3MkE0ODk3NCIsImh0dHA6Ly9zY2hlbWFzLm9yaW9uaGVhbHRoLmNvbS93cy8yMDE0LzEwL2lkZW50aXR5L2NsYWltcy9lbXBsb3llZS1qb2ItdHlwZS1jb2RlIjoiRE9DIiwiaHR0cDovL3NjaGVtYXMub3Jpb25oZWFsdGguY29tL3dzLzIwMTQvMTAvaWRlbnRpdHkvY2xhaW1zL2VtcGxveWVlLWpvYi10eXBlLW5hbWUtZSI6IkRvY3RvcnMiLCJodHRwOi8vc2NoZW1hcy5vcmlvbmhlYWx0aC5jb20vd3MvMjAxNC8xMC9pZGVudGl0eS9jbGFpbXMvZW1wbG95ZWUtam9iLXR5cGUtbmFtZS1sIjoiKkRvY3RvcnMqIiwiaHR0cDovL3NjaGVtYXMub3Jpb25oZWFsdGguY29tL3dzLzIwMTQvMTAvaWRlbnRpdHkvY2xhaW1zL2VtcGxveWVlLW51bWJlciI6Ijg0MTg2IiwiaHR0cDovL3NjaGVtYXMub3Jpb25oZWFsdGguY29tL3dzLzIwMTQvMTAvaWRlbnRpdHkvY2xhaW1zL2VtcGxveWVlLW91LWlkIjoiRDQzRkI3NzctQjQ3Ni1ERTExLTg1MjktMDAxMjNGRkYzNUNDIiwiaHR0cDovL3NjaGVtYXMub3Jpb25oZWFsdGguY29tL3dzLzIwMTQvMTAvaWRlbnRpdHkvY2xhaW1zL2VtcGxveWVlLW91LW5hbWUtZSI6IkVFTlQgQ2xpbmljcyIsImh0dHA6Ly9zY2hlbWFzLm9yaW9uaGVhbHRoLmNvbS93cy8yMDE0LzEwL2lkZW50aXR5L2NsYWltcy9lbXBsb3llZS1vdS1uYW1lLWwiOiIqRUVOVCBDbGluaWNzKiIsImh0dHA6Ly9zY2hlbWFzLm9yaW9uaGVhbHRoLmNvbS93cy8yMDE0LzEwL2lkZW50aXR5L2NsYWltcy91c2VyLWlkIjoiQUU0NTRFOEMtN0Q4Ny0xMURELTgzMkQtMDAxMzcyQTQ4OTc0IiwidW5pcXVlX25hbWUiOiJTWVNURU1TXFxoaXN1c2VyIiwiaXNzIjoic3RzLnNlY3VyaXR5Lm9yaW9uaGVhbHRoLmNvbSIsImF1ZCI6Imh0dHBzOi8vdGgtc29tYmF0cC1uYjIub3Jpb24uaW50ZXJuYWwvTWFpbkxvY2FsQ29tcG9uZW50cy9wbGF0Zm9ybS9hdXRoZW50aWNhdGlvbi90cnVzdC9pc3N1ZWR0b2tlbm1peGVkL3Rva2Vuc2VydmljZS5zdmMvMTMiLCJleHAiOjE2MzI3MzYwNTIsIm5iZiI6MTYzMjEzMTI1Mn0.LUaNlZoyLeslAYpR3lJ4IXWdcc6HXsJE_jEHH33vDB8oV0aFRvIQrI-5DP3kYzgT7sMhzOapSUTpJuV22r23ULGQbcfyeIfDof-hMeVXKJh3HPRSB3LWgMbDWtgkQdApXk9Fj-4XhMzxzD6H-ZUR3z-e-SrQj1I3QmjCFiXCOl7Cspwmz6z0XHr9RIBFMbFRmPgGQvzOqcP1xKdKf0YEY-0IDkTobNYcT3vNAOaEKy04neb4Kt8KJ9dDeavM-QTQJ9FlTgZeNWB7qGiFOqJ-Muyuq6C9xQTte_Kh10myLlQksFzHwkRVKHmt2Owvc6yNTuQuHmjwOkR99kYXX4RpuQ'
+    };
+    var request = http.Request(
+        'GET',
+        Uri.parse(
+            'https://th-sombatp-nb2.orion.internal/MainLocalComponents/api/back-office/patient-finance/policy-authorizations/?patientReferralIdentifier=27116@urn:orion:pas:referral:patient-referral:referral-number'));
+    request.body = '''''';
+    request.headers.addAll(headers);
+
+    http.StreamedResponse response = await request.send();
+
+    if (response.statusCode == 200) {
+      print(await response.stream.bytesToString());
+    } else {
+      print(response.reasonPhrase);
+    }
   }
 }
