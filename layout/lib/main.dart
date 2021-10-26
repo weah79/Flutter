@@ -3,6 +3,7 @@ import 'package:layout/pages/contact.dart';
 import 'package:layout/pages/home.dart';
 import 'package:layout/pages/search.dart';
 import 'package:layout/pages/add.dart';
+import 'package:layout/pages/todolist.dart';
 
 void main() {
   runApp(MyApp());
@@ -16,7 +17,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: "Mobile Application Tools and Website",
-      home: MainPage(),    
+      home: MainPage(),
     );
   }
 }
@@ -30,7 +31,7 @@ class MainPage extends StatefulWidget {
 
 class _MainPageState extends State<MainPage> {
   int _currentIndex = 0;
-  final tabs = [AddPage(), SearchPage(), ContactPage()];
+  final tabs = [AddPage(), Todolist(), SearchPage(), ContactPage()];
 
   @override
   Widget build(BuildContext context) {
@@ -40,12 +41,18 @@ class _MainPageState extends State<MainPage> {
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: _currentIndex,
         items: [
-          BottomNavigationBarItem(icon: Icon(Icons.home), label: "หน้าแรก"),
-          BottomNavigationBarItem(icon: Icon(Icons.search), label: "ค้นหา"),
-          BottomNavigationBarItem(icon: Icon(Icons.contact_phone), label: "ติดต่อเรา"),
+          BottomNavigationBarItem(
+              icon: Icon(Icons.home, color: Colors.blue), label: "หน้าแรก"),
+          BottomNavigationBarItem(
+              icon: Icon(Icons.list, color: Colors.blue),
+              label: "รายการทั้งหมด"),
+          BottomNavigationBarItem(
+              icon: Icon(Icons.search, color: Colors.blue), label: "ค้นหา"),
+          BottomNavigationBarItem(
+              icon: Icon(Icons.contact_phone, color: Colors.blue),
+              label: "ติดต่อเรา"),
         ],
-
-        onTap: (index){
+        onTap: (index) {
           setState(() {
             //print(index);
             _currentIndex = index;
